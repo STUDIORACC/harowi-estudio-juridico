@@ -11,7 +11,7 @@ function Splash() {
     <div className="crm-root flex min-h-screen items-center justify-center bg-canvas">
       <div className="flex flex-col items-center gap-4 text-navy-800">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/harowi-crm-logo.png" alt="Harowi Estudio Jurídico" className="h-24 w-auto animate-pulse" />
+        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/harowi-crm-logo.png`} alt="Harowi Estudio Jurídico" className="h-24 w-auto animate-pulse" />
         <p className="text-sm text-slate-500">Cargando HAROWI Legal CRM…</p>
       </div>
     </div>

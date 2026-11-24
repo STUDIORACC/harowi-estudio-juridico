@@ -53,7 +53,7 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
     <div className="flex h-full flex-col bg-navy-900 text-navy-100">
       <div className="flex shrink-0 flex-col items-center gap-1.5 px-4 pb-3 pt-4">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/harowi-crm-logo.png" alt="Harowi Estudio Jurídico" className="h-20 w-auto rounded-lg bg-[#faf9f5] px-3 py-1.5" />
+        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/harowi-crm-logo.png`} alt="Harowi Estudio Jurídico" className="h-20 w-auto rounded-lg bg-[#faf9f5] px-3 py-1.5" />
         <div className="text-[0.625rem] font-medium uppercase tracking-[0.22em] text-navy-300">Legal CRM</div>
       </div>
 

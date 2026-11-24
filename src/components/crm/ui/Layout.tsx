@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { ArrowDown, ArrowUp, ArrowUpDown, ChevronLeft, ChevronRight, Inbox } from 'lucide-react';
 import { initialsOf } from '@/crm/lib/text';
@@ -74,9 +75,9 @@ export function StatCard({
   const cls = 'block rounded-xl border border-slate-200/90 bg-white p-4 shadow-card transition-all';
   if (href)
     return (
-      <a href={href} className={cn(cls, 'hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-pop')}>
+      <Link href={href} className={cn(cls, 'hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-pop')}>
         {body}
-      </a>
+      </Link>
     );
   if (onClick)
     return (

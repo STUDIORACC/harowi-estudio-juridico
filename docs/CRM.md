@@ -26,7 +26,7 @@ otro día, se regenera (si nadie la modificó) o se desplazan las fechas conserv
 1. **Dashboard → «Escenario: alimentos»** (o Conversaciones). Pulse *Reproducir todo* o *Enviar
    como cliente* mensaje a mensaje: el asistente saluda, detecta Derecho de Familia · Demanda de
    alimentos, pide nombre, teléfono y correo, **crea el prospecto**, ofrece horarios, **registra la
-   cita** (tarjeta de confirmación) y notifica a la Dra. Jovana Quispe.
+   cita** (tarjeta de confirmación) y notifica a la Dra. Jovana Mendoza.
 2. Abra **Agenda** (la cita ya figura), **Prospectos** (historial comercial) y el panel derecho de la
    conversación (resumen, citas). Pulse *Tomar control* para responder como abogado.
 3. **«Escenario: penal urgente»**: ante una detención el asistente deja de preguntar, marca la

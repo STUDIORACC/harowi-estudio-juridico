@@ -28,7 +28,7 @@ const deadline = (title: string, due: number, setBy: string, verified: boolean, 
   done,
 });
 
-const VALERIA = 'Dra. Jovana Quispe';
+const VALERIA = 'Dra. Jovana Mendoza';
 const ANDRES = 'Dr. Andrés Salazar';
 const LUCIA = 'Dra. Lucía Paredes';
 const MATEO = 'Dr. Mateo Vargas';
@@ -316,10 +316,10 @@ export function buildDocuments(): DocumentRecord[] {
   return [
     doc('d01', 'DNI - Silvia Herrera.pdf', 'Identidad', 120, -44, 'Rosa Medina', { clientId: 'c01', caseId: 'e01' }),
     doc('d02', 'Partida de matrimonio.pdf', 'Identidad', 210, -40, 'Rosa Medina', { clientId: 'c01', caseId: 'e01' }),
-    doc('d03', 'Demanda de divorcio por causal (borrador).docx', 'Escritos', 84, -35, 'Dra. Jovana Quispe', { clientId: 'c01', caseId: 'e01' }, 'Borrador revisado con la clienta.'),
+    doc('d03', 'Demanda de divorcio por causal (borrador).docx', 'Escritos', 84, -35, 'Dra. Jovana Mendoza', { clientId: 'c01', caseId: 'e01' }, 'Borrador revisado con la clienta.'),
     doc('d04', 'Partida de nacimiento del menor.pdf', 'Identidad', 180, -146, 'Rosa Medina', { clientId: 'c04', caseId: 'e02' }),
     doc('d05', 'Boletas de gastos escolares.pdf', 'Comprobantes', 1450, -20, 'Fiorella Camacho', { clientId: 'c04', caseId: 'e02' }, 'Subido por la clienta.'),
-    doc('d06', 'Escrito de ofrecimiento de pruebas.docx', 'Escritos', 96, -9, 'Dra. Jovana Quispe', { clientId: 'c04', caseId: 'e02' }),
+    doc('d06', 'Escrito de ofrecimiento de pruebas.docx', 'Escritos', 96, -9, 'Dra. Jovana Mendoza', { clientId: 'c04', caseId: 'e02' }),
     doc('d07', 'Acta de conciliación previa.pdf', 'Resoluciones', 330, -140, 'Rosa Medina', { clientId: 'c04', caseId: 'e02' }),
     doc('d08', 'Carpeta fiscal - disposición N.° 02 (copia).pdf', 'Resoluciones', 2480, -30, 'Dr. Andrés Salazar', { clientId: 'c03', caseId: 'e05' }, 'Documento reservado.'),
     doc('d09', 'Recurso de apelación (borrador).docx', 'Escritos', 112, -2, 'Dr. Andrés Salazar', { clientId: 'c03', caseId: 'e05' }),
@@ -331,10 +331,10 @@ export function buildDocuments(): DocumentRecord[] {
     doc('d15', 'Minuta de constitución (borrador).docx', 'Contratos', 140, -1, 'Dr. Mateo Vargas', { clientId: 'c05', caseId: 'e10' }),
     doc('d16', 'Vigencia de poder del gerente.pdf', 'Identidad', 90, -3, 'Rosa Medina', { clientId: 'c05', caseId: 'e10' }),
     doc('d17', 'Cronograma de aportes de capital.xlsx', 'Comprobantes', 28, -2, 'Dr. Mateo Vargas', { clientId: 'c05', caseId: 'e10' }),
-    doc('d18', 'Sentencia de tenencia (copia certificada).pdf', 'Resoluciones', 520, -60, 'Dra. Jovana Quispe', { clientId: 'c11', caseId: 'e04' }),
+    doc('d18', 'Sentencia de tenencia (copia certificada).pdf', 'Resoluciones', 520, -60, 'Dra. Jovana Mendoza', { clientId: 'c11', caseId: 'e04' }),
     doc('d19', 'Fotografías del predio.jpg', 'Pruebas', 2100, -405, 'Dra. Lucía Paredes', { clientId: 'c09', caseId: 'e09' }),
     doc('d20', 'Declaración jurada de domicilio.pdf', 'Identidad', 75, -9, 'Rosa Medina', { clientId: 'c06', caseId: 'e03' }),
-    doc('d21', 'Convenio regulador de bienes (borrador).docx', 'Contratos', 102, -12, 'Dra. Jovana Quispe', { clientId: 'c06', caseId: 'e03' }, 'Falta la firma de ambos cónyuges.'),
+    doc('d21', 'Convenio regulador de bienes (borrador).docx', 'Contratos', 102, -12, 'Dra. Jovana Mendoza', { clientId: 'c06', caseId: 'e03' }, 'Falta la firma de ambos cónyuges.'),
     doc('d22', 'Resolución que declara infundado el pedido.pdf', 'Resoluciones', 260, -162, 'Dr. Andrés Salazar', { clientId: 'c07', caseId: 'e06' }),
   ];
 }

@@ -18,12 +18,12 @@ export function buildMembers(): Member[] {
   return [
     {
       id: M.jovana,
-      name: 'Jovana Quispe Mendoza',
+      name: 'Jovana Mendoza',
       title: 'Dra.',
       role: 'Abogada · Derecho de Familia',
       kind: 'abogado',
       areas: ['familia'],
-      email: mail('jovana.quispe'),
+      email: mail('jovana.mendoza'),
       phone: phone(11),
       availability: [
         ...weekdays([1, 2, 3, 4, 5], '09:00', '13:00'),
@@ -156,7 +156,7 @@ export function buildProspects(): Prospect[] {
       description: 'El padre retuvo a la niña tras el fin de semana de visitas y no la devuelve.',
       priority: 'alta', stage: 'en_atencion', lawyerId: M.jovana, ago: -2, time: '20:15',
       nextAction: 'Comunicarse hoy: pidió hablar con la abogada', nextActionDate: d(0),
-      trail: [[-2, '20:20', 'clasificacion', 'El asistente clasificó la consulta: Derecho de Familia · Tenencia y régimen de visitas.', ASSISTANT], [0, '07:50', 'derivacion', 'Solicitó hablar con una persona; conversación derivada a la Dra. Jovana Quispe.', ASSISTANT]],
+      trail: [[-2, '20:20', 'clasificacion', 'El asistente clasificó la consulta: Derecho de Familia · Tenencia y régimen de visitas.', ASSISTANT], [0, '07:50', 'derivacion', 'Solicitó hablar con una persona; conversación derivada a la Dra. Jovana Mendoza.', ASSISTANT]],
     }),
     base(9, {
       slug: 'henry.quispe', id: 'p09', name: 'Henry Quispe Condori', channel: 'web', area: 'civil', serviceSlug: 'prescripcion-adquisitiva',
@@ -190,7 +190,7 @@ export function buildProspects(): Prospect[] {
       description: 'Solicita divorcio por causal; el cónyuge se niega a firmar un acuerdo.',
       priority: 'media', stage: 'contratado', lawyerId: M.jovana, ago: -48, clientId: 'c01', time: '18:30',
       nextAction: 'Cliente contratado — expediente abierto', nextActionDate: null,
-      trail: [[-48, '18:40', 'clasificacion', 'El asistente clasificó la consulta: Derecho de Familia · Divorcio por causal.', ASSISTANT], [-44, '12:00', 'estado', 'Aceptó la propuesta: convertida en cliente.', 'Dra. Jovana Quispe']],
+      trail: [[-48, '18:40', 'clasificacion', 'El asistente clasificó la consulta: Derecho de Familia · Divorcio por causal.', ASSISTANT], [-44, '12:00', 'estado', 'Aceptó la propuesta: convertida en cliente.', 'Dra. Jovana Mendoza']],
     }),
     base(14, {
       slug: 'oscar.medina', id: 'p14', name: 'Óscar Medina Valverde', channel: 'web', area: 'civil', serviceSlug: 'remate-publico',
@@ -218,7 +218,7 @@ export function buildProspects(): Prospect[] {
       description: 'Solicita pensión de alimentos para su hijo; el padre aporta de forma irregular.',
       priority: 'media', stage: 'contratado', lawyerId: M.jovana, ago: -150, clientId: 'c04', time: '09:40',
       nextAction: 'Cliente contratado — expediente abierto', nextActionDate: null,
-      trail: [[-146, '10:00', 'estado', 'Aceptó la propuesta: convertida en cliente.', 'Dra. Jovana Quispe']],
+      trail: [[-146, '10:00', 'estado', 'Aceptó la propuesta: convertida en cliente.', 'Dra. Jovana Mendoza']],
     }),
     base(18, {
       slug: 'manuel.ibanez', id: 'p18', name: 'Manuel Ibáñez Torres', channel: 'whatsapp', area: 'empresarial', serviceSlug: 'constitucion-de-empresas',
