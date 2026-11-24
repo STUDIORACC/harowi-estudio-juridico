@@ -5,6 +5,9 @@ no hay multiempresa, ni organizaciones, ni suscripciones. Toda la información �
 servicios, equipo, contenido y configuración— pertenece a un solo estudio y se administra
 desde `/admin`.
 
+> **HAROWI Legal CRM** (sistema privado de gestión con asistente virtual, en `/crm`): ver
+> [docs/CRM.md](docs/CRM.md).
+
 ## Stack
 
 | Capa | Tecnología |

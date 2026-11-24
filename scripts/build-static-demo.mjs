@@ -49,6 +49,10 @@ for (const p of [
   'src/middleware.ts',
   'src/app/(panel)',
   'src/app/(panel-auth)',
+  // El CRM es un sistema privado: nunca forma parte de la versión pública.
+  'src/app/(crm)',
+  'src/components/crm',
+  'src/crm',
   'src/app/actions/admin.ts',
   'src/app/actions/auth.ts',
   'src/components/admin',

@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: '*',
         allow: '/',
         // El panel y las rutas de acción no deben indexarse.
-        disallow: ['/admin', '/admin/', '/api/'],
+        disallow: ['/admin', '/admin/', '/crm', '/crm/', '/api/'],
       },
     ],
     sitemap: `${siteUrl}/sitemap.xml`,

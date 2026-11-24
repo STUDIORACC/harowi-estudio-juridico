@@ -45,6 +45,11 @@ const nextConfig = {
         ],
       },
       {
+        // El CRM (HAROWI Legal CRM) es privado y no debe indexarse.
+        source: '/crm/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
+      {
         // El panel nunca debe aparecer en buscadores ni en cachés compartidas.
         source: '/admin/:path*',
         headers: [
