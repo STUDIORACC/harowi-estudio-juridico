@@ -18,7 +18,6 @@ import {
   UserPlus,
   X,
 } from 'lucide-react';
-import { LogoMark } from '@/components/layout/Logo';
 import { memberFull, memberShort } from '@/crm/lib/people';
 import { formatMessageStamp } from '@/crm/lib/dates';
 import { isTaskOverdue, globalSearch, unattendedConversations } from '@/crm/store/selectors';
@@ -52,12 +51,10 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
 
   return (
     <div className="flex h-full flex-col bg-navy-900 text-navy-100">
-      <div className="flex h-16 shrink-0 items-center gap-3 px-5">
-        <LogoMark className="h-8 w-8 text-white" />
-        <div className="leading-none">
-          <div className="text-[0.9375rem] font-semibold tracking-[0.18em] text-white">HAROWI</div>
-          <div className="mt-1 text-[0.625rem] font-medium uppercase tracking-[0.22em] text-navy-300">Legal CRM</div>
-        </div>
+      <div className="flex shrink-0 flex-col items-center gap-1.5 px-4 pb-3 pt-4">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/harowi-crm-logo.png" alt="Harowi Estudio Jurídico" className="h-20 w-auto rounded-lg bg-[#faf9f5] px-3 py-1.5" />
+        <div className="text-[0.625rem] font-medium uppercase tracking-[0.22em] text-navy-300">Legal CRM</div>
       </div>
 
       <nav aria-label="Módulos" className="crm-scroll min-h-0 flex-1 space-y-0.5 overflow-y-auto px-3 py-2">

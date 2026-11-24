@@ -86,11 +86,11 @@ export function buildConversations(): Conversation[] {
 
   return [
     conv('v01', {
-      channel: 'whatsapp', contactName: 'Carmen Rosa Huamán', handle: phone(101), prospectId: 'p01', status: 'ia', mode: 'auto', assignedTo: M.valeria,
+      channel: 'whatsapp', contactName: 'Carmen Rosa Huamán', handle: phone(101), prospectId: 'p01', status: 'ia', mode: 'auto', assignedTo: M.jovana,
       session: session({
-        stage: 'reservado', area: 'familia', serviceSlug: 'demanda-de-alimentos', modality: 'virtual', lawyerId: M.valeria, appointmentId: 'a01', prospectId: 'p01', turns: 8, bookingRequested: true,
+        stage: 'reservado', area: 'familia', serviceSlug: 'demanda-de-alimentos', modality: 'virtual', lawyerId: M.jovana, appointmentId: 'a01', prospectId: 'p01', turns: 8, bookingRequested: true,
         data: { name: 'Carmen Rosa Huamán Torres', phone: phone(101), email: 'carmen.huaman@example.com', description: 'Necesita fijar una pensión de alimentos para su hijo de 6 años.' },
-        chosen: { date: d(1), time: '15:00', lawyerId: M.valeria },
+        chosen: { date: d(1), time: '15:00', lawyerId: M.jovana },
       }),
       msgs: [
         [C, 'Hola, buenos días. Quisiera saber si ustedes ven demandas de alimentos. El papá de mi hijo no me pasa nada desde hace 4 meses.', -3, '10:12'],
@@ -103,16 +103,16 @@ export function buildConversations(): Conversation[] {
         [C, 'Sí, este mismo está bien', -3, '10:15'],
         [A, 'Si desea, déjeme un correo electrónico para enviarle la confirmación. Es opcional: puede responder «omitir».', -3, '10:15'],
         [C, 'carmen.huaman@example.com', -3, '10:17'],
-        [A, 'Gracias, Carmen. Ya registré su consulta en nuestro sistema como Derecho de Familia · Demanda de alimentos. La Dra. Valeria Quispe será quien la revise.', -3, '10:17'],
-        [A, '¿Le gustaría que coordine una consulta con la Dra. Valeria Quispe, de nuestro equipo de Familia?', -3, '10:17'],
+        [A, 'Gracias, Carmen. Ya registré su consulta en nuestro sistema como Derecho de Familia · Demanda de alimentos. La Dra. Jovana Quispe será quien la revise.', -3, '10:17'],
+        [A, '¿Le gustaría que coordine una consulta con la Dra. Jovana Quispe, de nuestro equipo de Familia?', -3, '10:17'],
         [C, 'Sí por favor, lo antes posible', -3, '10:20'],
         [A, 'Perfecto. Con gusto coordino su consulta.', -3, '10:20'],
         [A, '¿Prefiere una consulta presencial en nuestra oficina de San Isidro o virtual por videollamada?', -3, '10:20'],
         [C, 'Virtual, trabajo todo el día', -3, '10:22'],
-        [A, `Estos son los próximos horarios disponibles con la Dra. Valeria Quispe para una consulta virtual de 45 minutos:\n\n${slotLine(1, 1, '09:00')}\n${slotLine(2, 1, '15:00')}\n${slotLine(3, 2, '10:00')}\n\n¿Cuál le acomoda? También puede indicarme otro día u hora.`, -3, '10:22'],
+        [A, `Estos son los próximos horarios disponibles con la Dra. Jovana Quispe para una consulta virtual de 45 minutos:\n\n${slotLine(1, 1, '09:00')}\n${slotLine(2, 1, '15:00')}\n${slotLine(3, 2, '10:00')}\n\n¿Cuál le acomoda? También puede indicarme otro día u hora.`, -3, '10:22'],
         [C, 'La 2 por favor', -3, '10:28'],
-        [A, `Listo, su consulta quedó reservada para el ${formatDate(d(1), 'weekday')} a las ${formatTime12('15:00')} con la Dra. Valeria Quispe (virtual). Le enviaremos el enlace de la videollamada por este chat antes de la cita.`, -3, '10:28', null, { kind: 'booking', appointmentId: 'a01' }],
-        [A, 'Ya avisé a la Dra. Valeria Quispe y recibirá un recordatorio por este mismo canal. ¿Desea que le indique qué documentos conviene reunir para la consulta, o tiene alguna otra duda?', -3, '10:28'],
+        [A, `Listo, su consulta quedó reservada para el ${formatDate(d(1), 'weekday')} a las ${formatTime12('15:00')} con la Dra. Jovana Quispe (virtual). Le enviaremos el enlace de la videollamada por este chat antes de la cita.`, -3, '10:28', null, { kind: 'booking', appointmentId: 'a01' }],
+        [A, 'Ya avisé a la Dra. Jovana Quispe y recibirá un recordatorio por este mismo canal. ¿Desea que le indique qué documentos conviene reunir para la consulta, o tiene alguna otra duda?', -3, '10:28'],
       ],
     }),
 
@@ -156,10 +156,10 @@ export function buildConversations(): Conversation[] {
     }),
 
     conv('v05', {
-      channel: 'whatsapp', contactName: 'Ana Lucía Barrientos', handle: phone(108), prospectId: 'p08', status: 'abogado', priority: 'alta', pending: true, mode: 'manual', assignedTo: M.valeria, unread: 1,
+      channel: 'whatsapp', contactName: 'Ana Lucía Barrientos', handle: phone(108), prospectId: 'p08', status: 'abogado', priority: 'alta', pending: true, mode: 'manual', assignedTo: M.jovana, unread: 1,
       handoffReason: 'La persona solicitó hablar con un abogado.',
-      summary: 'Ana Lucía Barrientos Díaz (WhatsApp) consulta por tenencia y régimen de visitas: el padre de su hija no devolvió a la niña tras el fin de semana de visitas. Clasificado como Derecho de Familia · Tenencia. Pidió hablar con una persona; derivada a la Dra. Valeria Quispe con prioridad alta.',
-      session: session({ stage: 'derivado', area: 'familia', serviceSlug: 'tenencia', lawyerId: M.valeria, prospectId: 'p08', turns: 5, data: { name: 'Ana Lucía Barrientos Díaz', phone: phone(108), emailSkipped: true, description: 'El padre retuvo a la niña tras el fin de semana de visitas y no la devuelve.' } }),
+      summary: 'Ana Lucía Barrientos Díaz (WhatsApp) consulta por tenencia y régimen de visitas: el padre de su hija no devolvió a la niña tras el fin de semana de visitas. Clasificado como Derecho de Familia · Tenencia. Pidió hablar con una persona; derivada a la Dra. Jovana Quispe con prioridad alta.',
+      session: session({ stage: 'derivado', area: 'familia', serviceSlug: 'tenencia', lawyerId: M.jovana, prospectId: 'p08', turns: 5, data: { name: 'Ana Lucía Barrientos Díaz', phone: phone(108), emailSkipped: true, description: 'El padre retuvo a la niña tras el fin de semana de visitas y no la devuelve.' } }),
       msgs: [
         [C, 'Hola, necesito ayuda urgente con la tenencia de mi hija. Su papá se la llevó el fin de semana y no me la quiere devolver', -2, '20:15'],
         [A, `Buenas noches. ${GREET}`, -2, '20:15'],
@@ -168,17 +168,17 @@ export function buildConversations(): Conversation[] {
         [C, 'Ana Lucía Barrientos Díaz', -2, '20:18'],
         [A, '¿Podemos contactarle a este mismo número de WhatsApp (+51 900 000 108) o prefiere dejarme otro?', -2, '20:18'],
         [C, 'Este mismo. Por favor quiero hablar con la abogada, es muy urgente, no sé dónde está mi hija', 0, '07:48'],
-        [A, 'Por supuesto, Ana. Voy a comunicarle con la Dra. Valeria Quispe.', 0, '07:48'],
+        [A, 'Por supuesto, Ana. Voy a comunicarle con la Dra. Jovana Quispe.', 0, '07:48'],
         [A, 'Dejé un resumen de su consulta para que no tenga que repetirla. Desde este momento la atención pasa a una persona del estudio y le responderá por este mismo chat. Nuestro horario de atención es Lun a Vie, 09:00 — 19:00.', 0, '07:48', null, { kind: 'handoff' }],
-        [S, 'Conversación derivada a la Dra. Valeria Quispe · Prioridad alta · Atención automática detenida.', 0, '07:48'],
+        [S, 'Conversación derivada a la Dra. Jovana Quispe · Prioridad alta · Atención automática detenida.', 0, '07:48'],
         [C, 'Doctora, ya llegó el mensaje? Necesito que me llamen', 0, '08:20'],
       ],
     }),
 
     conv('v06', {
-      channel: 'facebook', contactName: 'Daniela Rojas', handle: 'Facebook · Daniela Rojas', prospectId: 'p19', status: 'ia', mode: 'auto', assignedTo: M.valeria,
+      channel: 'facebook', contactName: 'Daniela Rojas', handle: 'Facebook · Daniela Rojas', prospectId: 'p19', status: 'ia', mode: 'auto', assignedTo: M.jovana,
       session: session({
-        stage: 'modalidad', asked: 'modality', area: 'familia', serviceSlug: 'tenencia', lawyerId: M.valeria, prospectId: 'p19', turns: 6, bookingRequested: true,
+        stage: 'modalidad', asked: 'modality', area: 'familia', serviceSlug: 'tenencia', lawyerId: M.jovana, prospectId: 'p19', turns: 6, bookingRequested: true,
         data: { name: 'Daniela Rojas Cueva', phone: phone(119), emailSkipped: true, description: 'Desea regular la tenencia y el régimen de visitas de su hijo de 4 años.' },
       }),
       msgs: [
@@ -191,8 +191,8 @@ export function buildConversations(): Conversation[] {
         [C, '900 000 119', -8, '21:14'],
         [A, 'Si desea, déjeme un correo electrónico para enviarle la confirmación. Es opcional: puede responder «omitir».', -8, '21:14'],
         [C, 'omitir', -8, '21:15'],
-        [A, 'Gracias, Daniela. Ya registré su consulta en nuestro sistema como Derecho de Familia · Tenencia y régimen de visitas. La Dra. Valeria Quispe será quien la revise.', -8, '21:15'],
-        [A, '¿Le gustaría que coordine una consulta con la Dra. Valeria Quispe, de nuestro equipo de Familia?', -8, '21:15'],
+        [A, 'Gracias, Daniela. Ya registré su consulta en nuestro sistema como Derecho de Familia · Tenencia y régimen de visitas. La Dra. Jovana Quispe será quien la revise.', -8, '21:15'],
+        [A, '¿Le gustaría que coordine una consulta con la Dra. Jovana Quispe, de nuestro equipo de Familia?', -8, '21:15'],
         [C, 'Sí, me interesa', -8, '21:20'],
         [A, 'Perfecto. Con gusto coordino su consulta.', -8, '21:20'],
         [A, '¿Prefiere una consulta presencial en nuestra oficina de San Isidro o virtual por videollamada?', -8, '21:20'],
@@ -238,28 +238,28 @@ export function buildConversations(): Conversation[] {
     }),
 
     conv('v10', {
-      channel: 'facebook', contactName: 'Milagros Soto', handle: 'Facebook · Milagros Soto', prospectId: 'p06', status: 'finalizado', mode: 'auto', assignedTo: M.valeria,
-      session: session({ stage: 'cerrado', area: 'familia', serviceSlug: 'divorcio-mutuo-acuerdo', lawyerId: M.valeria, prospectId: 'p06', appointmentId: 'a09', turns: 8, modality: 'virtual', bookingRequested: true, data: { name: 'Milagros Soto Vílchez', phone: phone(106), emailSkipped: true } }),
+      channel: 'facebook', contactName: 'Milagros Soto', handle: 'Facebook · Milagros Soto', prospectId: 'p06', status: 'finalizado', mode: 'auto', assignedTo: M.jovana,
+      session: session({ stage: 'cerrado', area: 'familia', serviceSlug: 'divorcio-mutuo-acuerdo', lawyerId: M.jovana, prospectId: 'p06', appointmentId: 'a09', turns: 8, modality: 'virtual', bookingRequested: true, data: { name: 'Milagros Soto Vílchez', phone: phone(106), emailSkipped: true } }),
       msgs: [
         [C, 'Buenas noches, mi esposo y yo estamos separados y los dos queremos divorciarnos de común acuerdo, no tenemos hijos menores', -4, '19:05'],
         [A, `Buenas noches. ${GREET}`, -4, '19:05'],
         [A, 'Entiendo. Por lo que me comenta, su consulta corresponde al área de Derecho de Familia, en el servicio de «Divorcio de mutuo acuerdo».', -4, '19:05'],
         [C, 'Milagros Soto Vílchez, 900 000 106', -4, '19:10'],
-        [A, 'Gracias, Milagros. Ya registré su consulta como Derecho de Familia · Divorcio de mutuo acuerdo. La Dra. Valeria Quispe será quien la revise.', -4, '19:10'],
-        [A, `Listo, su consulta quedó reservada para el ${formatDate(d(-1), 'weekday')} a las ${formatTime12('12:00')} con la Dra. Valeria Quispe (virtual).`, -4, '19:18', null, { kind: 'booking', appointmentId: 'a09' }],
-        [G, 'Hola Milagros, fue un gusto atenderla en la consulta. Quedo atenta a sus comentarios sobre la propuesta.', -1, '13:00', M.valeria],
+        [A, 'Gracias, Milagros. Ya registré su consulta como Derecho de Familia · Divorcio de mutuo acuerdo. La Dra. Jovana Quispe será quien la revise.', -4, '19:10'],
+        [A, `Listo, su consulta quedó reservada para el ${formatDate(d(-1), 'weekday')} a las ${formatTime12('12:00')} con la Dra. Jovana Quispe (virtual).`, -4, '19:18', null, { kind: 'booking', appointmentId: 'a09' }],
+        [G, 'Hola Milagros, fue un gusto atenderla en la consulta. Quedo atenta a sus comentarios sobre la propuesta.', -1, '13:00', M.jovana],
       ],
     }),
 
     conv('v11', {
-      channel: 'whatsapp', contactName: 'Jimena Cáceres', handle: phone(211), clientId: 'c11', status: 'abogado', pending: true, mode: 'manual', assignedTo: M.valeria, unread: 1,
+      channel: 'whatsapp', contactName: 'Jimena Cáceres', handle: phone(211), clientId: 'c11', status: 'abogado', pending: true, mode: 'manual', assignedTo: M.jovana, unread: 1,
       handoffReason: 'Consulta de una clienta sobre el avance de su expediente.',
-      summary: 'Jimena Cáceres Bravo (clienta, expediente HAR-2026-004 · Tenencia) consulta por el avance de su caso. Derivada a la Dra. Valeria Quispe, abogada responsable.',
-      session: session({ stage: 'derivado', area: 'familia', serviceSlug: 'tenencia', lawyerId: M.valeria, turns: 1, data: { name: 'Jimena Cáceres Bravo', phone: phone(211) } }),
+      summary: 'Jimena Cáceres Bravo (clienta, expediente HAR-2026-004 · Tenencia) consulta por el avance de su caso. Derivada a la Dra. Jovana Quispe, abogada responsable.',
+      session: session({ stage: 'derivado', area: 'familia', serviceSlug: 'tenencia', lawyerId: M.jovana, turns: 1, data: { name: 'Jimena Cáceres Bravo', phone: phone(211) } }),
       msgs: [
         [C, 'Hola buenas tardes, ¿cómo va mi caso? ¿ya salió algo del juzgado?', 0, '11:02'],
         [A, 'Para consultas sobre el avance de un expediente es mejor que le responda directamente el abogado a cargo, que tiene la información actualizada. Lo comunico ahora con el equipo.', 0, '11:02', null, { kind: 'handoff' }],
-        [S, 'Conversación de cliente derivada a la Dra. Valeria Quispe · Atención automática detenida.', 0, '11:02'],
+        [S, 'Conversación de cliente derivada a la Dra. Jovana Quispe · Atención automática detenida.', 0, '11:02'],
       ],
     }),
 
@@ -292,11 +292,11 @@ export function buildNotifications(): Notification[] {
   ): Notification => ({ id, at: at(ago, time), kind, title, body, href, read, forMemberId });
   return [
     n('n01', 'derivacion', 'Derivación urgente', 'Raúl Espinoza reporta una detención. Derivado al Dr. Andrés Salazar.', '/crm/conversaciones?id=v02', -1, '22:03', false, M.andres),
-    n('n02', 'derivacion', 'Solicitud de abogada', 'Ana Lucía Barrientos pidió hablar con la Dra. Valeria Quispe.', '/crm/conversaciones?id=v05', 0, '07:48', false, M.valeria),
-    n('n03', 'mensaje', 'Mensaje de una clienta', 'Jimena Cáceres consulta por el avance de su expediente.', '/crm/conversaciones?id=v11', 0, '11:02', false, M.valeria),
+    n('n02', 'derivacion', 'Solicitud de abogada', 'Ana Lucía Barrientos pidió hablar con la Dra. Jovana Quispe.', '/crm/conversaciones?id=v05', 0, '07:48', false, M.jovana),
+    n('n03', 'mensaje', 'Mensaje de una clienta', 'Jimena Cáceres consulta por el avance de su expediente.', '/crm/conversaciones?id=v11', 0, '11:02', false, M.jovana),
     n('n04', 'prospecto', 'Nueva consulta por Messenger', 'Gabriela Salinas consulta por reducción de alimentos.', '/crm/conversaciones?id=v03', 0, '09:12', false, null),
-    n('n05', 'cita', 'Cita reservada por el asistente', 'Carmen Rosa Huamán · consulta virtual con la Dra. Valeria Quispe.', '/crm/agenda', -3, '10:28', true, M.valeria),
-    n('n06', 'tarea', 'Tarea vencida', 'Revisar el expediente HAR-2026-004: observación del juzgado.', '/crm/tareas', 0, '08:00', false, M.valeria),
+    n('n05', 'cita', 'Cita reservada por el asistente', 'Carmen Rosa Huamán · consulta virtual con la Dra. Jovana Quispe.', '/crm/agenda', -3, '10:28', true, M.jovana),
+    n('n06', 'tarea', 'Tarea vencida', 'Revisar el expediente HAR-2026-004: observación del juzgado.', '/crm/tareas', 0, '08:00', false, M.jovana),
   ];
 }
 
@@ -310,15 +310,15 @@ export function buildActivity(): ActivityEntry[] {
     href,
   });
   return [
-    e(0, '11:02', ASSISTANT, 'asistente', 'derivó la conversación de Jimena Cáceres a la Dra. Valeria Quispe.', '/crm/conversaciones?id=v11'),
+    e(0, '11:02', ASSISTANT, 'asistente', 'derivó la conversación de Jimena Cáceres a la Dra. Jovana Quispe.', '/crm/conversaciones?id=v11'),
     e(0, '09:12', ASSISTANT, 'asistente', 'recibió una consulta de Gabriela Salinas por Facebook Messenger.', '/crm/conversaciones?id=v03'),
     e(0, '08:45', ASSISTANT, 'asistente', 'recibió una consulta de Rosa M. Quispe por WhatsApp.', '/crm/conversaciones?id=v09'),
-    e(0, '07:48', ASSISTANT, 'asistente', 'derivó a Ana Lucía Barrientos a la Dra. Valeria Quispe (solicitó hablar con una persona).', '/crm/conversaciones?id=v05'),
+    e(0, '07:48', ASSISTANT, 'asistente', 'derivó a Ana Lucía Barrientos a la Dra. Jovana Quispe (solicitó hablar con una persona).', '/crm/conversaciones?id=v05'),
     e(-1, '22:10', 'Dr. Andrés Salazar', 'equipo', 'tomó el control de la conversación con Raúl Espinoza.', '/crm/conversaciones?id=v02'),
     e(-1, '22:03', ASSISTANT, 'asistente', 'derivó de inmediato a Raúl Espinoza al Dr. Andrés Salazar (detención reportada).', '/crm/conversaciones?id=v02'),
-    e(-1, '12:40', 'Dra. Valeria Quispe', 'equipo', 'marcó como atendida la consulta de Milagros Soto.', '/crm/agenda'),
+    e(-1, '12:40', 'Dra. Jovana Quispe', 'equipo', 'marcó como atendida la consulta de Milagros Soto.', '/crm/agenda'),
     e(-2, '16:45', 'Sistema', 'sistema', 'registró que Rosa María Quispe no asistió a su consulta.', '/crm/agenda'),
-    e(-3, '10:28', ASSISTANT, 'asistente', 'reservó una consulta para Carmen Rosa Huamán con la Dra. Valeria Quispe.', '/crm/agenda'),
+    e(-3, '10:28', ASSISTANT, 'asistente', 'reservó una consulta para Carmen Rosa Huamán con la Dra. Jovana Quispe.', '/crm/agenda'),
     e(-3, '10:17', ASSISTANT, 'asistente', 'creó el prospecto Carmen Rosa Huamán Torres (Familia · Demanda de alimentos).', '/crm/prospectos'),
     e(-3, '10:00', 'Dr. Mateo Vargas', 'equipo', 'registró la firma del contrato de servicios de Constructora Los Álamos SAC.', '/crm/expedientes'),
     e(-4, '12:00', 'Dr. Mateo Vargas', 'equipo', 'convirtió a Hernán Lozada en cliente y abrió el expediente HAR-2026-010.', '/crm/expedientes'),

@@ -28,7 +28,7 @@ const deadline = (title: string, due: number, setBy: string, verified: boolean, 
   done,
 });
 
-const VALERIA = 'Dra. Valeria Quispe';
+const VALERIA = 'Dra. Jovana Quispe';
 const ANDRES = 'Dr. Andrés Salazar';
 const LUCIA = 'Dra. Lucía Paredes';
 const MATEO = 'Dr. Mateo Vargas';
@@ -57,7 +57,7 @@ export function buildCases(): CaseFile[] {
   return [
     make({
       id: 'e01', code: 'HAR-2026-001', clientId: 'c01', area: 'familia', serviceSlug: 'divorcio-por-causal',
-      procedure: 'Proceso de divorcio por causal', lawyerId: M.valeria, counterparty: 'Marco Antonio Reyes Villanueva',
+      procedure: 'Proceso de divorcio por causal', lawyerId: M.jovana, counterparty: 'Marco Antonio Reyes Villanueva',
       courtFileNumber: '01234-2026-0-1801-JR-FC-05', court: '5.º Juzgado de Familia de Lima', status: 'tramite', opened: -44, by: VALERIA,
       description: 'Divorcio por causal de separación de hecho. El cónyuge no accedió a un acuerdo; se tramita en la vía judicial.',
       ev: [
@@ -72,7 +72,7 @@ export function buildCases(): CaseFile[] {
     }),
     make({
       id: 'e02', code: 'HAR-2026-002', clientId: 'c04', area: 'familia', serviceSlug: 'demanda-de-alimentos',
-      procedure: 'Proceso único de alimentos', lawyerId: M.valeria, counterparty: 'Julio César Medina Lara',
+      procedure: 'Proceso único de alimentos', lawyerId: M.jovana, counterparty: 'Julio César Medina Lara',
       courtFileNumber: '02876-2026-0-1801-JP-FC-02', court: '2.º Juzgado de Paz Letrado de Los Olivos', status: 'audiencia', opened: -146, by: VALERIA,
       description: 'Demanda de alimentos para un hijo menor. Se encuentra pendiente la audiencia única.',
       ev: [
@@ -87,7 +87,7 @@ export function buildCases(): CaseFile[] {
     }),
     make({
       id: 'e03', code: 'HAR-2026-003', clientId: 'c06', area: 'familia', serviceSlug: 'divorcio-mutuo-acuerdo',
-      procedure: 'Divorcio de mutuo acuerdo (vía no contenciosa)', lawyerId: M.valeria, counterparty: 'Alberto Núñez Sosa',
+      procedure: 'Divorcio de mutuo acuerdo (vía no contenciosa)', lawyerId: M.jovana, counterparty: 'Alberto Núñez Sosa',
       courtFileNumber: null, court: null, status: 'pendiente_doc', opened: -30, by: VALERIA,
       description: 'Divorcio de mutuo acuerdo sin hijos menores. Se espera la documentación faltante para la solicitud.',
       ev: [
@@ -99,7 +99,7 @@ export function buildCases(): CaseFile[] {
     }),
     make({
       id: 'e04', code: 'HAR-2026-004', clientId: 'c11', area: 'familia', serviceSlug: 'tenencia',
-      procedure: 'Tenencia y régimen de visitas', lawyerId: M.valeria, counterparty: 'Pablo Andrés Ledesma Rivas',
+      procedure: 'Tenencia y régimen de visitas', lawyerId: M.jovana, counterparty: 'Pablo Andrés Ledesma Rivas',
       courtFileNumber: '00911-2026-0-1801-JR-FC-03', court: '3.º Juzgado de Familia de Lima', status: 'tramite', opened: -200, by: VALERIA,
       description: 'Proceso de tenencia con régimen de visitas. Se subsana una observación del juzgado.',
       ev: [
@@ -225,15 +225,15 @@ export function buildAppointments(): Appointment[] {
   });
 
   return [
-    a('a01', { day: 1, time: '15:00', kind: 'consulta_inicial', prospectId: 'p01', lawyerId: M.valeria, area: 'familia', serviceSlug: 'demanda-de-alimentos', durationMin: 45, modality: 'virtual', status: 'pendiente', notes: 'Reservada por el asistente desde WhatsApp.', source: 'asistente', created: -3 }),
+    a('a01', { day: 1, time: '15:00', kind: 'consulta_inicial', prospectId: 'p01', lawyerId: M.jovana, area: 'familia', serviceSlug: 'demanda-de-alimentos', durationMin: 45, modality: 'virtual', status: 'pendiente', notes: 'Reservada por el asistente desde WhatsApp.', source: 'asistente', created: -3 }),
     a('a02', { day: 0, time: '11:30', kind: 'estrategia', clientId: 'c03', caseId: 'e05', lawyerId: M.andres, area: 'penal', serviceSlug: 'derecho-penal', durationMin: 60, modality: 'presencial', status: 'confirmada', notes: 'Preparar la apelación y la audiencia.', source: 'manual' }),
     a('a03', { day: 0, time: '16:00', kind: 'consulta_inicial', prospectId: 'p11', lawyerId: M.mateo, area: 'empresarial', serviceSlug: 'constitucion-de-empresas', durationMin: 45, modality: 'virtual', status: 'confirmada', notes: 'Reservada por el asistente desde el chat web.', source: 'asistente', created: -6 }),
-    a('a04', { day: 0, time: '17:00', kind: 'seguimiento', clientId: 'c04', caseId: 'e02', lawyerId: M.valeria, area: 'familia', serviceSlug: 'demanda-de-alimentos', durationMin: 30, modality: 'virtual', status: 'pendiente', notes: 'Repaso previo a la audiencia única.', source: 'manual' }),
+    a('a04', { day: 0, time: '17:00', kind: 'seguimiento', clientId: 'c04', caseId: 'e02', lawyerId: M.jovana, area: 'familia', serviceSlug: 'demanda-de-alimentos', durationMin: 30, modality: 'virtual', status: 'pendiente', notes: 'Repaso previo a la audiencia única.', source: 'manual' }),
     a('a05', { day: 1, time: '09:30', kind: 'revision_documentos', clientId: 'c02', caseId: 'e08', lawyerId: M.lucia, area: 'civil', serviceSlug: 'remate-publico', durationMin: 45, modality: 'presencial', status: 'confirmada', notes: 'Revisión de las bases del remate.', source: 'manual' }),
-    a('a06', { day: 3, time: '10:00', kind: 'audiencia', clientId: 'c04', caseId: 'e02', lawyerId: M.valeria, area: 'familia', serviceSlug: 'demanda-de-alimentos', durationMin: 90, modality: 'presencial', status: 'confirmada', notes: 'Audiencia única — 2.º Juzgado de Paz Letrado de Los Olivos. Fecha ingresada por la abogada.', source: 'manual' }),
+    a('a06', { day: 3, time: '10:00', kind: 'audiencia', clientId: 'c04', caseId: 'e02', lawyerId: M.jovana, area: 'familia', serviceSlug: 'demanda-de-alimentos', durationMin: 90, modality: 'presencial', status: 'confirmada', notes: 'Audiencia única — 2.º Juzgado de Paz Letrado de Los Olivos. Fecha ingresada por la abogada.', source: 'manual' }),
     a('a07', { day: 2, time: '15:30', kind: 'consulta_inicial', prospectId: 'p12', lawyerId: M.andres, area: 'penal', serviceSlug: 'lavado-de-activos', durationMin: 45, modality: 'presencial', status: 'confirmada', notes: 'Programada por el abogado tras la derivación.', source: 'manual', created: -6 }),
     a('a08', { day: 5, time: '09:00', kind: 'audiencia', clientId: 'c03', caseId: 'e05', lawyerId: M.andres, area: 'penal', serviceSlug: 'derecho-penal', durationMin: 90, modality: 'presencial', status: 'confirmada', notes: 'Audiencia — 12.º Juzgado Penal de Lima. Fecha ingresada por el abogado.', source: 'manual' }),
-    a('a09', { day: -1, time: '12:00', kind: 'consulta_inicial', prospectId: 'p06', lawyerId: M.valeria, area: 'familia', serviceSlug: 'divorcio-mutuo-acuerdo', durationMin: 45, modality: 'virtual', status: 'atendida', notes: 'Se explicó la vía de mutuo acuerdo. Pendiente evaluar propuesta.', source: 'asistente', created: -4 }),
+    a('a09', { day: -1, time: '12:00', kind: 'consulta_inicial', prospectId: 'p06', lawyerId: M.jovana, area: 'familia', serviceSlug: 'divorcio-mutuo-acuerdo', durationMin: 45, modality: 'virtual', status: 'atendida', notes: 'Se explicó la vía de mutuo acuerdo. Pendiente evaluar propuesta.', source: 'asistente', created: -4 }),
     a('a10', { day: -2, time: '16:00', kind: 'consulta_inicial', prospectId: 'p03', lawyerId: M.lucia, area: 'civil', serviceSlug: 'desalojo', durationMin: 45, modality: 'presencial', status: 'no_asistio', notes: 'No se presentó ni respondió al recordatorio.', source: 'asistente', created: -5 }),
     a('a11', { day: -3, time: '10:00', kind: 'firma', clientId: 'c05', caseId: 'e10', lawyerId: M.mateo, area: 'empresarial', serviceSlug: 'constitucion-de-empresas', durationMin: 30, modality: 'presencial', status: 'atendida', notes: 'Firma del contrato de servicios.', source: 'manual' }),
     a('a12', { day: 1, time: '12:00', kind: 'consulta_inicial', prospectId: 'p02', lawyerId: M.andres, area: 'penal', serviceSlug: 'prision-preventiva', durationMin: 45, modality: 'presencial', status: 'cancelada', notes: 'Reprogramada: el cliente solicitó una reunión de preparación más cercana a la audiencia.', source: 'manual', created: -4 }),
@@ -272,9 +272,9 @@ export function buildTasks(): Task[] {
     t('t01', { title: 'Llamar a Rosa María Quispe para reagendar la consulta', description: 'No asistió a la cita; proponer dos horarios nuevos.', relatedType: 'prospecto', relatedId: 'p03', assigneeId: M.rosa, priority: 'alta', status: 'pendiente', due: 1 }),
     t('t02', { title: 'Preparar propuesta de servicios para Diego Fuentes', description: 'Constitución de empresa con cuatro socios. Incluir cronograma.', relatedType: 'prospecto', relatedId: 'p11', assigneeId: M.mateo, priority: 'media', status: 'pendiente', due: 3 }),
     t('t03', { title: 'Confirmar asistencia de Carmen Rosa Huamán', description: 'Recordatorio por WhatsApp un día antes de la consulta.', relatedType: 'prospecto', relatedId: 'p01', assigneeId: M.rosa, priority: 'alta', status: 'pendiente', due: 0 }),
-    t('t04', { title: 'Revisar la documentación del divorcio de Mercedes Aguirre', description: 'Verificar que el convenio y la declaración jurada estén completos.', relatedType: 'expediente', relatedId: 'e03', assigneeId: M.valeria, priority: 'media', status: 'en_curso', due: 2 }),
-    t('t05', { title: 'Preparar la audiencia única de alimentos', description: 'Ordenar medios probatorios y repasar el interrogatorio con la clienta.', relatedType: 'expediente', relatedId: 'e02', assigneeId: M.valeria, priority: 'alta', status: 'en_curso', due: 2 }),
-    t('t06', { title: 'Revisar el expediente: observación del juzgado', description: 'Subsanar la observación y presentar el escrito. Verificar el plazo en el cargo de notificación.', relatedType: 'expediente', relatedId: 'e04', assigneeId: M.valeria, priority: 'alta', status: 'pendiente', due: -1 }),
+    t('t04', { title: 'Revisar la documentación del divorcio de Mercedes Aguirre', description: 'Verificar que el convenio y la declaración jurada estén completos.', relatedType: 'expediente', relatedId: 'e03', assigneeId: M.jovana, priority: 'media', status: 'en_curso', due: 2 }),
+    t('t05', { title: 'Preparar la audiencia única de alimentos', description: 'Ordenar medios probatorios y repasar el interrogatorio con la clienta.', relatedType: 'expediente', relatedId: 'e02', assigneeId: M.jovana, priority: 'alta', status: 'en_curso', due: 2 }),
+    t('t06', { title: 'Revisar el expediente: observación del juzgado', description: 'Subsanar la observación y presentar el escrito. Verificar el plazo en el cargo de notificación.', relatedType: 'expediente', relatedId: 'e04', assigneeId: M.jovana, priority: 'alta', status: 'pendiente', due: -1 }),
     t('t07', { title: 'Preparar la sustentación para la audiencia', description: 'Requerimiento de prisión preventiva: reunir documentación de arraigo.', relatedType: 'prospecto', relatedId: 'p02', assigneeId: M.andres, priority: 'urgente', status: 'en_curso', due: 1 }),
     t('t08', { title: 'Revisar la disposición fiscal de Javier Cornejo', description: 'Identificar hechos imputados y elementos de convicción.', relatedType: 'prospecto', relatedId: 'p07', assigneeId: M.andres, priority: 'alta', status: 'pendiente', due: 2 }),
     t('t09', { title: 'Presentar el recurso de apelación', description: 'Plazo verificado por el abogado. Adjuntar los anexos revisados.', relatedType: 'expediente', relatedId: 'e05', assigneeId: M.andres, priority: 'alta', status: 'pendiente', due: 1 }),
@@ -316,10 +316,10 @@ export function buildDocuments(): DocumentRecord[] {
   return [
     doc('d01', 'DNI - Silvia Herrera.pdf', 'Identidad', 120, -44, 'Rosa Medina', { clientId: 'c01', caseId: 'e01' }),
     doc('d02', 'Partida de matrimonio.pdf', 'Identidad', 210, -40, 'Rosa Medina', { clientId: 'c01', caseId: 'e01' }),
-    doc('d03', 'Demanda de divorcio por causal (borrador).docx', 'Escritos', 84, -35, 'Dra. Valeria Quispe', { clientId: 'c01', caseId: 'e01' }, 'Borrador revisado con la clienta.'),
+    doc('d03', 'Demanda de divorcio por causal (borrador).docx', 'Escritos', 84, -35, 'Dra. Jovana Quispe', { clientId: 'c01', caseId: 'e01' }, 'Borrador revisado con la clienta.'),
     doc('d04', 'Partida de nacimiento del menor.pdf', 'Identidad', 180, -146, 'Rosa Medina', { clientId: 'c04', caseId: 'e02' }),
     doc('d05', 'Boletas de gastos escolares.pdf', 'Comprobantes', 1450, -20, 'Fiorella Camacho', { clientId: 'c04', caseId: 'e02' }, 'Subido por la clienta.'),
-    doc('d06', 'Escrito de ofrecimiento de pruebas.docx', 'Escritos', 96, -9, 'Dra. Valeria Quispe', { clientId: 'c04', caseId: 'e02' }),
+    doc('d06', 'Escrito de ofrecimiento de pruebas.docx', 'Escritos', 96, -9, 'Dra. Jovana Quispe', { clientId: 'c04', caseId: 'e02' }),
     doc('d07', 'Acta de conciliación previa.pdf', 'Resoluciones', 330, -140, 'Rosa Medina', { clientId: 'c04', caseId: 'e02' }),
     doc('d08', 'Carpeta fiscal - disposición N.° 02 (copia).pdf', 'Resoluciones', 2480, -30, 'Dr. Andrés Salazar', { clientId: 'c03', caseId: 'e05' }, 'Documento reservado.'),
     doc('d09', 'Recurso de apelación (borrador).docx', 'Escritos', 112, -2, 'Dr. Andrés Salazar', { clientId: 'c03', caseId: 'e05' }),
@@ -331,10 +331,10 @@ export function buildDocuments(): DocumentRecord[] {
     doc('d15', 'Minuta de constitución (borrador).docx', 'Contratos', 140, -1, 'Dr. Mateo Vargas', { clientId: 'c05', caseId: 'e10' }),
     doc('d16', 'Vigencia de poder del gerente.pdf', 'Identidad', 90, -3, 'Rosa Medina', { clientId: 'c05', caseId: 'e10' }),
     doc('d17', 'Cronograma de aportes de capital.xlsx', 'Comprobantes', 28, -2, 'Dr. Mateo Vargas', { clientId: 'c05', caseId: 'e10' }),
-    doc('d18', 'Sentencia de tenencia (copia certificada).pdf', 'Resoluciones', 520, -60, 'Dra. Valeria Quispe', { clientId: 'c11', caseId: 'e04' }),
+    doc('d18', 'Sentencia de tenencia (copia certificada).pdf', 'Resoluciones', 520, -60, 'Dra. Jovana Quispe', { clientId: 'c11', caseId: 'e04' }),
     doc('d19', 'Fotografías del predio.jpg', 'Pruebas', 2100, -405, 'Dra. Lucía Paredes', { clientId: 'c09', caseId: 'e09' }),
     doc('d20', 'Declaración jurada de domicilio.pdf', 'Identidad', 75, -9, 'Rosa Medina', { clientId: 'c06', caseId: 'e03' }),
-    doc('d21', 'Convenio regulador de bienes (borrador).docx', 'Contratos', 102, -12, 'Dra. Valeria Quispe', { clientId: 'c06', caseId: 'e03' }, 'Falta la firma de ambos cónyuges.'),
+    doc('d21', 'Convenio regulador de bienes (borrador).docx', 'Contratos', 102, -12, 'Dra. Jovana Quispe', { clientId: 'c06', caseId: 'e03' }, 'Falta la firma de ambos cónyuges.'),
     doc('d22', 'Resolución que declara infundado el pedido.pdf', 'Resoluciones', 260, -162, 'Dr. Andrés Salazar', { clientId: 'c07', caseId: 'e06' }),
   ];
 }

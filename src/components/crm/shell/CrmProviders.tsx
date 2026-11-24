@@ -2,7 +2,6 @@
 
 import { Suspense, useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
-import { LogoMark } from '@/components/layout/Logo';
 import { initStore, useCrmOrNull } from '@/crm/store/store';
 import { ToastProvider } from '../ui/Toast';
 import { CrmShell } from './CrmShell';
@@ -11,7 +10,8 @@ function Splash() {
   return (
     <div className="crm-root flex min-h-screen items-center justify-center bg-canvas">
       <div className="flex flex-col items-center gap-4 text-navy-800">
-        <LogoMark className="h-10 w-10 animate-pulse text-navy-700" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/harowi-crm-logo.png" alt="Harowi Estudio Jurídico" className="h-24 w-auto animate-pulse" />
         <p className="text-sm text-slate-500">Cargando HAROWI Legal CRM…</p>
       </div>
     </div>

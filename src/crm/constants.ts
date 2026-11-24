@@ -180,4 +180,4 @@ export const DEFAULT_DOCUMENT_CATEGORIES = [
 ];
 
 export const STORAGE_KEY = 'harowi-legal-crm:v1';
-export const STATE_VERSION = 1;
+export const STATE_VERSION = 2;

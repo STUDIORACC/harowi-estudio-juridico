@@ -17,7 +17,7 @@ export function buildSeed(): CrmState {
   return {
     version: STATE_VERSION,
     anchorDay: todayISO(),
-    currentUserId: M.valeria,
+    currentUserId: M.jovana,
     members: buildMembers(),
     prospects: buildProspects(),
     clients: buildClients(),

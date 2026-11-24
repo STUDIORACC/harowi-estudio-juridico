@@ -78,14 +78,14 @@ async function main() {
   const a2 = S().appointments.find((a) => a.id === 'a02')!;
   const clash = crm.createAppointment({ kind: 'consulta_inicial', prospectId: 'p01', clientId: null, caseId: null, lawyerId: a2.lawyerId, area: 'penal', serviceSlug: null, date: a2.date, time: a2.time, durationMin: 45, modality: 'virtual', status: 'pendiente', notes: '', reminderWhatsapp: true, reminderEmail: false });
   ok(!clash.ok, 'rechaza una cita que se cruza con otra del mismo abogado');
-  const free = crm.createAppointment({ kind: 'seguimiento', prospectId: 'p01', clientId: null, caseId: null, lawyerId: 'm-valeria', area: 'familia', serviceSlug: null, date: addDays(today, 6), time: '10:00', durationMin: 30, modality: 'virtual', status: 'pendiente', notes: '', reminderWhatsapp: true, reminderEmail: false });
+  const free = crm.createAppointment({ kind: 'seguimiento', prospectId: 'p01', clientId: null, caseId: null, lawyerId: 'm-jovana', area: 'familia', serviceSlug: null, date: addDays(today, 6), time: '10:00', durationMin: 30, modality: 'virtual', status: 'pendiente', notes: '', reminderWhatsapp: true, reminderEmail: false });
   ok(free.ok, 'crea una cita en un horario libre');
-  ok(Boolean(findConflict(S().appointments, 'm-valeria', addDays(today, 6), '10:15', 30)), 'detecta el cruce parcial de horarios');
+  ok(Boolean(findConflict(S().appointments, 'm-jovana', addDays(today, 6), '10:15', 30)), 'detecta el cruce parcial de horarios');
   if (free.ok) {
     ok(!crm.rescheduleAppointment(free.id, { date: a2.date, time: a2.time, lawyerId: a2.lawyerId }).ok, 'no permite reprogramar sobre otra cita');
     ok(crm.rescheduleAppointment(free.id, { date: addDays(today, 6), time: '11:00' }).ok, 'reprograma a un horario libre');
     ok(crm.setAppointmentStatus(free.id, 'cancelada').ok, 'cancela la cita');
-    ok(!findConflict(S().appointments, 'm-valeria', addDays(today, 6), '11:00', 30), 'la cita cancelada libera el horario');
+    ok(!findConflict(S().appointments, 'm-jovana', addDays(today, 6), '11:00', 30), 'la cita cancelada libera el horario');
   }
   const tasksBefore = S().tasks.length;
   ok(crm.setAppointmentStatus('a01', 'no_asistio').ok, 'registra inasistencia');

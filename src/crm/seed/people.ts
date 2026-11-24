@@ -7,7 +7,7 @@ const weekdays = (days: number[], start: string, end: string): AvailabilityRule[
   days.map((weekday) => ({ weekday, start, end }));
 
 export const M = {
-  valeria: 'm-valeria',
+  jovana: 'm-jovana',
   andres: 'm-andres',
   lucia: 'm-lucia',
   mateo: 'm-mateo',
@@ -17,13 +17,13 @@ export const M = {
 export function buildMembers(): Member[] {
   return [
     {
-      id: M.valeria,
-      name: 'Valeria Quispe Mendoza',
+      id: M.jovana,
+      name: 'Jovana Quispe Mendoza',
       title: 'Dra.',
       role: 'Abogada · Derecho de Familia',
       kind: 'abogado',
       areas: ['familia'],
-      email: mail('valeria.quispe'),
+      email: mail('jovana.quispe'),
       phone: phone(11),
       availability: [
         ...weekdays([1, 2, 3, 4, 5], '09:00', '13:00'),
@@ -103,7 +103,7 @@ export function buildProspects(): Prospect[] {
     base(1, {
       slug: 'carmen.huaman', id: 'p01', name: 'Carmen Rosa Huamán Torres', channel: 'whatsapp', area: 'familia', serviceSlug: 'demanda-de-alimentos',
       description: 'Necesita fijar una pensión de alimentos para su hijo de 6 años; el padre no aporta desde hace cuatro meses.',
-      priority: 'alta', stage: 'cita_programada', lawyerId: M.valeria, ago: -3, time: '10:12',
+      priority: 'alta', stage: 'cita_programada', lawyerId: M.jovana, ago: -3, time: '10:12',
       nextAction: 'Confirmar asistencia a la consulta', nextActionDate: d(0),
       trail: [[-3, '10:14', 'clasificacion', 'El asistente clasificó la consulta: Derecho de Familia · Demanda de alimentos.', ASSISTANT], [-3, '10:31', 'cita', 'El asistente reservó una consulta inicial virtual.', ASSISTANT]],
     }),
@@ -140,7 +140,7 @@ export function buildProspects(): Prospect[] {
     base(6, {
       slug: 'milagros.soto', id: 'p06', name: 'Milagros Soto Vílchez', channel: 'whatsapp', area: 'familia', serviceSlug: 'divorcio-mutuo-acuerdo',
       description: 'Pareja separada de común acuerdo, sin hijos menores. Desean formalizar el divorcio.',
-      priority: 'media', stage: 'calificado', lawyerId: M.valeria, ago: -4, time: '19:05',
+      priority: 'media', stage: 'calificado', lawyerId: M.jovana, ago: -4, time: '19:05',
       nextAction: 'Llamar para proponer fecha de consulta', nextActionDate: d(1),
       trail: [[-4, '19:12', 'clasificacion', 'El asistente clasificó la consulta: Derecho de Familia · Divorcio de mutuo acuerdo.', ASSISTANT]],
     }),
@@ -154,9 +154,9 @@ export function buildProspects(): Prospect[] {
     base(8, {
       slug: 'ana.barrientos', id: 'p08', name: 'Ana Lucía Barrientos Díaz', channel: 'whatsapp', area: 'familia', serviceSlug: 'tenencia',
       description: 'El padre retuvo a la niña tras el fin de semana de visitas y no la devuelve.',
-      priority: 'alta', stage: 'en_atencion', lawyerId: M.valeria, ago: -2, time: '20:15',
+      priority: 'alta', stage: 'en_atencion', lawyerId: M.jovana, ago: -2, time: '20:15',
       nextAction: 'Comunicarse hoy: pidió hablar con la abogada', nextActionDate: d(0),
-      trail: [[-2, '20:20', 'clasificacion', 'El asistente clasificó la consulta: Derecho de Familia · Tenencia y régimen de visitas.', ASSISTANT], [0, '07:50', 'derivacion', 'Solicitó hablar con una persona; conversación derivada a la Dra. Valeria Quispe.', ASSISTANT]],
+      trail: [[-2, '20:20', 'clasificacion', 'El asistente clasificó la consulta: Derecho de Familia · Tenencia y régimen de visitas.', ASSISTANT], [0, '07:50', 'derivacion', 'Solicitó hablar con una persona; conversación derivada a la Dra. Jovana Quispe.', ASSISTANT]],
     }),
     base(9, {
       slug: 'henry.quispe', id: 'p09', name: 'Henry Quispe Condori', channel: 'web', area: 'civil', serviceSlug: 'prescripcion-adquisitiva',
@@ -188,9 +188,9 @@ export function buildProspects(): Prospect[] {
     base(13, {
       slug: 'silvia.herrera', id: 'p13', name: 'Silvia Paola Herrera Núñez', channel: 'facebook', area: 'familia', serviceSlug: 'divorcio-por-causal',
       description: 'Solicita divorcio por causal; el cónyuge se niega a firmar un acuerdo.',
-      priority: 'media', stage: 'contratado', lawyerId: M.valeria, ago: -48, clientId: 'c01', time: '18:30',
+      priority: 'media', stage: 'contratado', lawyerId: M.jovana, ago: -48, clientId: 'c01', time: '18:30',
       nextAction: 'Cliente contratado — expediente abierto', nextActionDate: null,
-      trail: [[-48, '18:40', 'clasificacion', 'El asistente clasificó la consulta: Derecho de Familia · Divorcio por causal.', ASSISTANT], [-44, '12:00', 'estado', 'Aceptó la propuesta: convertida en cliente.', 'Dra. Valeria Quispe']],
+      trail: [[-48, '18:40', 'clasificacion', 'El asistente clasificó la consulta: Derecho de Familia · Divorcio por causal.', ASSISTANT], [-44, '12:00', 'estado', 'Aceptó la propuesta: convertida en cliente.', 'Dra. Jovana Quispe']],
     }),
     base(14, {
       slug: 'oscar.medina', id: 'p14', name: 'Óscar Medina Valverde', channel: 'web', area: 'civil', serviceSlug: 'remate-publico',
@@ -216,9 +216,9 @@ export function buildProspects(): Prospect[] {
     base(17, {
       slug: 'fiorella.camacho', id: 'p17', name: 'Fiorella Camacho Zegarra', channel: 'web', area: 'familia', serviceSlug: 'demanda-de-alimentos',
       description: 'Solicita pensión de alimentos para su hijo; el padre aporta de forma irregular.',
-      priority: 'media', stage: 'contratado', lawyerId: M.valeria, ago: -150, clientId: 'c04', time: '09:40',
+      priority: 'media', stage: 'contratado', lawyerId: M.jovana, ago: -150, clientId: 'c04', time: '09:40',
       nextAction: 'Cliente contratado — expediente abierto', nextActionDate: null,
-      trail: [[-146, '10:00', 'estado', 'Aceptó la propuesta: convertida en cliente.', 'Dra. Valeria Quispe']],
+      trail: [[-146, '10:00', 'estado', 'Aceptó la propuesta: convertida en cliente.', 'Dra. Jovana Quispe']],
     }),
     base(18, {
       slug: 'manuel.ibanez', id: 'p18', name: 'Manuel Ibáñez Torres', channel: 'whatsapp', area: 'empresarial', serviceSlug: 'constitucion-de-empresas',
@@ -230,7 +230,7 @@ export function buildProspects(): Prospect[] {
     base(19, {
       slug: 'daniela.rojas', id: 'p19', name: 'Daniela Rojas Cueva', channel: 'facebook', area: 'familia', serviceSlug: 'tenencia',
       description: 'Desea regular la tenencia y el régimen de visitas de su hijo de 4 años.',
-      priority: 'media', stage: 'calificado', lawyerId: M.valeria, ago: -8, time: '21:10',
+      priority: 'media', stage: 'calificado', lawyerId: M.jovana, ago: -8, time: '21:10',
       nextAction: 'Llamar para proponer consulta', nextActionDate: d(-1),
       trail: [[-8, '21:20', 'clasificacion', 'El asistente clasificó la consulta: Derecho de Familia · Tenencia y régimen de visitas.', ASSISTANT]],
     }),
@@ -250,7 +250,7 @@ export function buildProspects(): Prospect[] {
     base(22, {
       slug: 'elias.rondon', id: 'p22', name: 'Elías Rondón Pacheco', channel: 'facebook', area: 'familia', serviceSlug: 'divorcio-mutuo-acuerdo',
       description: 'Consultó por un divorcio de mutuo acuerdo.',
-      priority: 'baja', stage: 'cerrado', lawyerId: M.valeria, ago: -140, closedReason: 'Se reconcilió con su pareja.', time: '19:00',
+      priority: 'baja', stage: 'cerrado', lawyerId: M.jovana, ago: -140, closedReason: 'Se reconcilió con su pareja.', time: '19:00',
       nextAction: 'Sin acciones pendientes', nextActionDate: null,
     }),
     base(23, {
@@ -308,17 +308,17 @@ export function buildClients(): Client[] {
     notes: v.notes,
   });
   return [
-    c(1, { id: 'c01', slug: 'silvia.herrera', name: 'Silvia Paola Herrera Núñez', kind: 'persona', docType: 'DNI', docNumber: '40000001', district: 'Miraflores', lawyerId: M.valeria, status: 'activo', since: -44, prospectId: 'p13', notes: 'Prefiere comunicaciones por WhatsApp en horario de tarde.' }),
+    c(1, { id: 'c01', slug: 'silvia.herrera', name: 'Silvia Paola Herrera Núñez', kind: 'persona', docType: 'DNI', docNumber: '40000001', district: 'Miraflores', lawyerId: M.jovana, status: 'activo', since: -44, prospectId: 'p13', notes: 'Prefiere comunicaciones por WhatsApp en horario de tarde.' }),
     c(2, { id: 'c02', slug: 'oscar.medina', name: 'Óscar Medina Valverde', kind: 'persona', docType: 'DNI', docNumber: '40000002', district: 'Surquillo', lawyerId: M.lucia, status: 'activo', since: -75, prospectId: 'p14', notes: '' }),
     c(3, { id: 'c03', slug: 'cristian.vega', name: 'Cristian Vega Ortiz', kind: 'persona', docType: 'DNI', docNumber: '40000003', district: 'San Borja', lawyerId: M.andres, status: 'activo', since: -115, prospectId: 'p16', notes: 'Solicita reuniones presenciales y reservadas.' }),
-    c(4, { id: 'c04', slug: 'fiorella.camacho', name: 'Fiorella Camacho Zegarra', kind: 'persona', docType: 'DNI', docNumber: '40000004', district: 'Los Olivos', lawyerId: M.valeria, status: 'activo', since: -146, prospectId: 'p17', notes: '' }),
+    c(4, { id: 'c04', slug: 'fiorella.camacho', name: 'Fiorella Camacho Zegarra', kind: 'persona', docType: 'DNI', docNumber: '40000004', district: 'Los Olivos', lawyerId: M.jovana, status: 'activo', since: -146, prospectId: 'p17', notes: '' }),
     c(5, { id: 'c05', slug: 'contacto.losalamos', name: 'Constructora Los Álamos SAC', kind: 'empresa', docType: 'RUC', docNumber: '20000000001', district: 'San Isidro', lawyerId: M.mateo, status: 'activo', since: -4, prospectId: 'p23', notes: 'Contacto: Hernán Lozada Quiroz (gerente).' }),
-    c(6, { id: 'c06', slug: 'mercedes.aguirre', name: 'Mercedes Aguirre Landa', kind: 'persona', docType: 'DNI', docNumber: '40000006', district: 'Jesús María', lawyerId: M.valeria, status: 'activo', since: -32, prospectId: null, notes: '' }),
+    c(6, { id: 'c06', slug: 'mercedes.aguirre', name: 'Mercedes Aguirre Landa', kind: 'persona', docType: 'DNI', docNumber: '40000006', district: 'Jesús María', lawyerId: M.jovana, status: 'activo', since: -32, prospectId: null, notes: '' }),
     c(7, { id: 'c07', slug: 'ricardo.salcedo', name: 'Ricardo Salcedo Pinto', kind: 'persona', docType: 'DNI', docNumber: '40000007', district: 'Santiago de Surco', lawyerId: M.andres, status: 'activo', since: -170, prospectId: null, notes: '' }),
     c(8, { id: 'c08', slug: 'contacto.pachacamac', name: 'Corporación Textil Pachacámac SAC', kind: 'empresa', docType: 'RUC', docNumber: '20000000002', district: 'Ate', lawyerId: M.mateo, status: 'inactivo', since: -300, prospectId: null, notes: 'Servicio de constitución concluido; sin trámites vigentes.' }),
     c(9, { id: 'c09', slug: 'elena.tapia', name: 'Elena Tapia Montalvo', kind: 'persona', docType: 'DNI', docNumber: '40000009', district: 'Barranco', lawyerId: M.lucia, status: 'inactivo', since: -420, prospectId: null, notes: 'Expediente archivado.' }),
     c(10, { id: 'c10', slug: 'victor.alarcon', name: 'Víctor Hugo Alarcón Sáenz', kind: 'persona', docType: 'CE', docNumber: '000123456', district: 'La Molina', lawyerId: M.andres, status: 'activo', since: -95, prospectId: null, notes: '' }),
-    c(11, { id: 'c11', slug: 'jimena.caceres', name: 'Jimena Cáceres Bravo', kind: 'persona', docType: 'DNI', docNumber: '40000011', district: 'Magdalena del Mar', lawyerId: M.valeria, status: 'activo', since: -200, prospectId: null, notes: 'Consulta con frecuencia por WhatsApp sobre el avance de su caso.' }),
+    c(11, { id: 'c11', slug: 'jimena.caceres', name: 'Jimena Cáceres Bravo', kind: 'persona', docType: 'DNI', docNumber: '40000011', district: 'Magdalena del Mar', lawyerId: M.jovana, status: 'activo', since: -200, prospectId: null, notes: 'Consulta con frecuencia por WhatsApp sobre el avance de su caso.' }),
     c(12, { id: 'c12', slug: 'contacto.santabeatriz', name: 'Inmobiliaria Santa Beatriz EIRL', kind: 'empresa', docType: 'RUC', docNumber: '20000000003', district: 'Lince', lawyerId: M.lucia, status: 'activo', since: -230, prospectId: null, notes: 'Cartera de inmuebles en alquiler; consultas recurrentes por desalojo.' }),
   ];
 }
